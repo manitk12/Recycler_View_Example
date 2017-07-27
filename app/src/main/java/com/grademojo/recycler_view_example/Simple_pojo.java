@@ -8,15 +8,18 @@ public class Simple_pojo {
 
     private String header;
 
+    private String body;
+
+
     public String getBody() {
-        return Body;
+        return body;
     }
 
     public void setBody(String body) {
-        Body = body;
+        this.body = body;
     }
 
-    private String Body;
+
 
     public String getHeader() {
         return header;

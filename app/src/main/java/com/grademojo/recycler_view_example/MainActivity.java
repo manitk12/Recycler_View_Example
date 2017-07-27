@@ -34,13 +34,21 @@ public class MainActivity extends Activity {
 
 
         // Step 2: Make adapter object
-        List<String> input = new ArrayList<>();
+        List<Simple_pojo> input = new ArrayList<>();
 
         for (int i = 0; i < 100; i++) {
 
-            input.add("Test" + i);
+
+            Simple_pojo simple_pojo = new Simple_pojo();
+
+            simple_pojo.setValues("Test" +i);
+
+
+            input.add(simple_pojo);
         }
         mAdapter = new MyAdapter(input);
+
+
 
 
 
@@ -63,4 +71,7 @@ public class MainActivity extends Activity {
         // Optional stuff
         recyclerView.setHasFixedSize(true);
     }
+
+
+
 }

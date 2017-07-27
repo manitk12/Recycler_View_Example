@@ -14,7 +14,7 @@ import java.util.List;
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
 
-    private List<String> values;
+    private List<Simple_pojo> values;
 
 
     public class ViewHolder extends RecyclerView.ViewHolder{
@@ -41,7 +41,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
 
 
-    public MyAdapter(List<String > mydataset){
+    public MyAdapter(List<Simple_pojo > mydataset){
 
         values = mydataset;
     }
@@ -62,7 +62,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
     public void onBindViewHolder(ViewHolder holder, final int position) {
 
-        final String name = values.get(position);
+        final String name = values.get(position).getValues();
 
 //        holder.txtHeader.setOnClickListener(new View.OnClickListener() {
 //            @Override

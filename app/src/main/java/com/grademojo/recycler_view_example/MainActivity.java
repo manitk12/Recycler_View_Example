@@ -9,12 +9,15 @@ import java.util.List;
 
 public class MainActivity extends Activity {
 
-
     private RecyclerView recyclerView;
 
-    private RecyclerView.Adapter mAdapter;
+    private MyAdapter mAdapter;
 
     private RecyclerView.LayoutManager mLayoutManager;
+
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,17 +27,13 @@ public class MainActivity extends Activity {
 
 
 
+        // Step 1: Store recycler view's reference
         recyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
 
 
-        recyclerView.setHasFixedSize(true);
-
-        mLayoutManager = new LinearLayoutManager(this);
 
 
-        recyclerView.setLayoutManager(mLayoutManager);
-
-
+        // Step 2: Make adapter object
         List<String> input = new ArrayList<>();
 
         for (int i = 0; i < 100; i++) {
@@ -43,6 +42,25 @@ public class MainActivity extends Activity {
         }
         mAdapter = new MyAdapter(input);
 
+
+
+        // Step 3: bind the adapter to recycler view
         recyclerView.setAdapter(mAdapter);
+
+
+
+        // Step 4: make a layout manager object
+        mLayoutManager = new LinearLayoutManager(this);
+
+
+
+        // Step 5: bind the layoutManager object to recycler view
+        recyclerView.setLayoutManager(mLayoutManager);
+
+
+
+
+        // Optional stuff
+        recyclerView.setHasFixedSize(true);
     }
 }

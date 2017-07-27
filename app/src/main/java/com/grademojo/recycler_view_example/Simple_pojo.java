@@ -8,6 +8,18 @@ public class Simple_pojo {
 
     private String values;
 
+    private String header;
+
+    public String getHeader() {
+        return header;
+    }
+
+    public void setHeader(String header) {
+        this.header = header;
+    }
+
+
+
 
     public String getValues() {
         return values;

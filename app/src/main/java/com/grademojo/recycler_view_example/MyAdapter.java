@@ -64,6 +64,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
         final String name = values.get(position).getValues();
 
+        final String Header = values.get(position).getValues();
+
 //        holder.txtHeader.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
@@ -73,6 +75,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 //        });
 
         holder.textFooter.setText("Footer :"+name);
+
+        holder.txtHeader.setText("Header :"+Header);
 
     }
 

@@ -41,26 +41,10 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
 
 
-    public void remove(int position){
-
-        values.remove(position);
-        notifyItemRemoved(position);
-
-    }
-
-
-
-
-
     public MyAdapter(List<String > mydataset){
 
         values = mydataset;
-
-
     }
-
-
-
 
 
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -76,28 +60,21 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     }
 
 
-
-
-
     public void onBindViewHolder(ViewHolder holder, final int position) {
 
         final String name = values.get(position);
 
-        holder.txtHeader.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                remove(position);
-            }
-        });
+//        holder.txtHeader.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//                remove(position);
+//            }
+//        });
 
         holder.textFooter.setText("Footer :"+name);
 
     }
-
-
-
-
 
 
     public int getItemCount() {
@@ -108,4 +85,11 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
 
 
+
+//    public void remove(int position){
+//
+//        values.remove(position);
+//        notifyItemRemoved(position);
+//
+//    }
 }

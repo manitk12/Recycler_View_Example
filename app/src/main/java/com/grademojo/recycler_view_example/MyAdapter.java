@@ -22,6 +22,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
         public TextView txtHeader;
         public TextView textFooter;
+        public TextView textBody;
+
         public View layout;
 
 
@@ -33,6 +35,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
             layout = itemView;
             txtHeader = (TextView) itemView.findViewById(R.id.firstLine);
             textFooter = (TextView) itemView.findViewById(R.id.secondLine);
+            textBody = (TextView) itemView.findViewById(R.id.ThirdLine);
+
 
         }
     }
@@ -66,6 +70,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
         final String Header = values.get(position).getHeader();
 
+        final String Body = values.get(position).getBody();
+
 //        holder.txtHeader.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
@@ -77,6 +83,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         holder.textFooter.setText("Footer :"+name);
 
         holder.txtHeader.setText("Header :"+Header);
+
+        holder.textBody.setText("relative :"+Body);
 
     }
 

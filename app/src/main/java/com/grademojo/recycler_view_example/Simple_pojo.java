@@ -1,14 +1,22 @@
 package com.grademojo.recycler_view_example;
 
-/**
- * Created by sapling_a0 on 27/7/17.
- */
+
 
 public class Simple_pojo {
 
     private String values;
 
     private String header;
+
+    public String getBody() {
+        return Body;
+    }
+
+    public void setBody(String body) {
+        Body = body;
+    }
+
+    private String Body;
 
     public String getHeader() {
         return header;

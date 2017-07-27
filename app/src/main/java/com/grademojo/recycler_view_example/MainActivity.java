@@ -46,6 +46,8 @@ public class MainActivity extends Activity {
 
             simple_pojo.setHeader("Example"+i);
 
+            simple_pojo.setBody("Body"+i);
+
 
 
             input.add(simple_pojo);

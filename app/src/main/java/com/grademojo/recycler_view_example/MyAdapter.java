@@ -38,6 +38,13 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
             textBody = (TextView) itemView.findViewById(R.id.ThirdLine);
 
 
+            txtHeader.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    remove(getAdapterPosition());
+                }
+            });
         }
     }
 
@@ -72,13 +79,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
         final String body = values.get(position).getBody();
 
-//        holder.txtHeader.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//                remove(position);
-//            }
-//        });
+
 
         holder.textFooter.setText("Footer :"+name);
 
@@ -98,10 +99,10 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
 
 
-//    public void remove(int position){
-//
-//        values.remove(position);
-//        notifyItemRemoved(position);
-//
-//    }
+    public void remove(int position){
+
+        values.remove(position);
+        notifyItemRemoved(position);
+
+    }
 }
